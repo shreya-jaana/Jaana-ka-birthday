@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Jana ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="rain"></canvas>
+
+<audio id="bgMusic" autoplay loop>
+    <source src="baarishein.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SECTION 1 PASSWORD -->
+<section id="scene1" class="scene active">
+    <h1>Welcome to My World</h1>
+    <p>This world belongs to only one person – My Jana 💖</p>
+    <input type="text" id="password" placeholder="Enter Our Special Date">
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error"></p>
+</section>
+
+<!-- SECTION 2 GAME -->
+<section id="scene2" class="scene">
+    <h1>Catch My Heart</h1>
+    <p>Miss even ONE heart… and it's over.</p>
+    <div id="gameArea"></div>
+    <p id="score">Score: 0</p>
+    <button id="nextBtn" onclick="goToScene(3)" style="display:none;">Enter My Gifts</button>
+</section>
+
+<!-- SECTION 3 PARAGRAPH -->
+<section id="scene3" class="scene">
+    <h1>Your First Gift</h1>
+    <p id="typedText"></p>
+    <button onclick="goToScene(4)">Open Your Next Gift</button>
+</section>
+
+<!-- SECTION 4 GIFTS -->
+<section id="scene4" class="scene">
+    <h1>Open Them One By One</h1>
+    <div class="gifts">
+        <div class="gift" onclick="openGift(this)">You are the best person because your heart is pure.</div>
+        <div class="gift" onclick="openGift(this)">I am so proud of you and the man you are becoming.</div>
+        <div class="gift" onclick="openGift(this)">I love you deeply and truly.</div>
+        <div class="gift" onclick="openGift(this)">This is just the beginning of countless birthdays together.</div>
+    </div>
+    <button id="finalBtn" onclick="goToScene(5)" style="display:none;">Biggest Gift</button>
+</section>
+
+<!-- SECTION 5 FINAL -->
+<section id="scene5" class="scene">
+    <h1>Touch for Your Biggest Gift</h1>
+    <button onclick="showFinal()">Touch Here 💋</button>
+    <div id="finalMessage"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
